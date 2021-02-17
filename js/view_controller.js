@@ -4,7 +4,7 @@
 /* Der Plan
     Einlesen Daten von Webseite :: 
 	Check Daten :: 
-    Btn. Trigger :: 
+    Btn. Trigger :: check
     Business-Logic (Alter --> Getränk) :: check
     Bild austauschen :: check!
 */
@@ -13,6 +13,15 @@
 //controller();
 function controller() {
     ausgabe(updateImg(checkAge(getInput())))
+}
+
+// Btn-Definition + Funktionalität
+let btn = document.getElementById("trigBtn");
+btn.addEventListener("click", actOnClick);
+
+function actOnClick() {
+    //ausgabe("klick!");
+    controller();
 }
 
 // Modul: Eingabe | Test:
@@ -43,15 +52,12 @@ function checkAge(age) {
 
 }
 
-
 // Modul: Bild aktualisieren | Test:
 //ausgabe(updateImg("cola"));
 function updateImg(imgName) {
     let img = document.getElementById("bevImg");
     img.src = "./bilder/" + imgName + ".jpg";
     return imgName;
-
-
 }
 
 //Modul: Konsolenausgabe --> Test:
