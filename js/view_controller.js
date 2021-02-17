@@ -9,6 +9,17 @@
     Bild austauschen :: check!
 */
 
+function getInput() {
+    
+}
+
+
+// Modul: Ablaufsteuerung | Test:
+controller();
+function controller() {
+    ausgabe(updateImg(checkAge(5)))
+}
+
 // Modul: Business-Logic (Mapping) | Test:
 //ausgabe(checkAge(6));
 function checkAge(age) {
