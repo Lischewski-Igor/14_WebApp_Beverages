@@ -9,15 +9,18 @@
     Bild austauschen :: check!
 */
 
-function getInput() {
-    
+// Modul: Ablaufsteuerung | Test:
+//controller();
+function controller() {
+    ausgabe(updateImg(checkAge(getInput())))
 }
 
-
-// Modul: Ablaufsteuerung | Test:
-controller();
-function controller() {
-    ausgabe(updateImg(checkAge(5)))
+// Modul: Eingabe | Test:
+//ausgabe(getInput());
+function getInput() {
+    let inputField = document.getElementsByName("eingabe")[0]; // Elements mehrzahl (array)
+    let age = parseInt(inputField.value);
+    return age;
 }
 
 // Modul: Business-Logic (Mapping) | Test:
