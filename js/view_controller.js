@@ -5,12 +5,33 @@
     Einlesen Daten von Webseite :: 
 	Check Daten :: 
     Btn. Trigger :: 
-    Business-Logic (Alter --> Getränk) :: 
-    Bild austauschen :: 
+    Business-Logic (Alter --> Getränk) :: check
+    Bild austauschen :: check!
 */
 
+// Modul: Business-Logic (Mapping) | Test:
+//ausgabe(checkAge(6));
+function checkAge(age) {
+
+    switch (true) 
+        {
+            case (age >= 0) && (age <= 5):
+                return "milch";
+            case (age >= 6) && (age <= 12):
+                return "saft";
+            case (age >= 13) && (age <= 17):
+                return "cola";
+            case (age >= 18) && (age <= 130):
+                return "wein";    
+            default:
+                return "tee";
+        }
+
+}
+
+
 // Modul: Bild aktualisieren | Test:
-ausgabe(updateImg("cola"));
+//ausgabe(updateImg("cola"));
 function updateImg(imgName) {
     let img = document.getElementById("bevImg");
     img.src = "./bilder/" + imgName + ".jpg";
