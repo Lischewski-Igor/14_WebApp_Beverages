@@ -45,7 +45,7 @@ function checkAge(age) {
             case (age >= data.cola.lower) && (age <= data.cola.upper):
                 return data.cola.bev;
             case (age >= data.wine.lower) && (age <= data.wine.upper):
-                return data.cola.bev;    
+                return data.wine.bev;    
             default:
                 return data.default.bev;
         }
