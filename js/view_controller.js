@@ -9,7 +9,15 @@
     Bild austauschen :: 
 */
 
+// Modul: Bild aktualisieren | Test:
+ausgabe(updateImg("cola"));
+function updateImg(imgName) {
+    let img = document.getElementById("bevImg");
+    img.src = "./bilder/" + imgName + ".jpg";
+    return imgName;
 
+
+}
 
 //Modul: Konsolenausgabe --> Test:
 //ausgabe("test");
