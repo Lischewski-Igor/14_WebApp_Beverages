@@ -15,13 +15,34 @@ function controller() {
     ausgabe(updateImg(checkAge(getInput())))
 }
 
-// Btn-Definition + Funktionalität
+// Trigger - Btn
 let btn = document.getElementById("trigBtn");
 btn.addEventListener("click", actOnClick);
 
+// Trigger - Input
+let field = document.getElementsByName("eingabe")[0];
+field.addEventListener("input", isInputValid);
+
+// Event - Dispatcher
 function actOnClick() {
-    //ausgabe("klick!");
-    controller();
+    if (isInputValid()) {
+        controller();
+    } else {
+        ausgabe("input nicht korrekt!")
+    }
+}
+
+function isInputValid() {
+    let inputStr = field.value;
+    let patt = /^[0-9]?[0-9]?[0-9]$/g;
+    let cond = patt.test(inputStr);
+
+    if (!cond) {
+        field.value = "";
+        updateImg(data.default.bev);
+    }
+    
+    return cond;
 }
 
 // Modul: Eingabe | Test:
